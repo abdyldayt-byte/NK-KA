@@ -14,22 +14,27 @@
 <div class="petals" id="petals"></div>
 
 <!-- OPENING CARD -->
-<div class="cover" id="cover">
+<div class="cover" id="cover" role="button" tabindex="0" aria-label="Открыть приглашение">
+  <div class="cover-texture"></div>
   <div class="cover-inner">
-    <p class="cover-kicker">Вас приглашают на свадьбу</p>
+    <svg class="monogram-svg" viewBox="0 0 300 400" aria-hidden="true">
+      <ellipse cx="150" cy="200" rx="122" ry="163" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M90,45 C102,22 132,16 150,27 C168,16 198,22 210,45" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M90,355 C102,378 132,384 150,373 C168,384 198,378 210,355" fill="none" stroke="currentColor" stroke-width="2"/>
+      <rect x="13" y="193" width="11" height="11" transform="rotate(45 18.5 198.5)" fill="currentColor"/>
+      <rect x="276" y="193" width="11" height="11" transform="rotate(45 281.5 198.5)" fill="currentColor"/>
+      <text x="112" y="252" font-family="'Cormorant Garamond', serif" font-size="150" text-anchor="middle" fill="currentColor" opacity="0.92">Н</text>
+      <text x="192" y="272" font-family="'Cormorant Garamond', serif" font-size="150" text-anchor="middle" fill="currentColor" opacity="0.92">К</text>
+    </svg>
 
-    <div class="envelope" id="envelope">
-      <div class="envelope-flap"></div>
-      <div class="envelope-seal">Н<span class="amp">&amp;</span>К</div>
-      <div class="envelope-body"></div>
-      <div class="envelope-letter">
-        <p class="letter-label">Приглашение</p>
-        <h2 class="letter-names">Николай <span class="amp">&amp;</span> Карина</h2>
-        <p class="letter-date">07 · 08 · 2026</p>
-      </div>
-    </div>
+    <div class="lace"></div>
+    <div class="pearl"></div>
 
-    <button class="cover-btn" id="openInvite" type="button">Открыть приглашение</button>
+    <p class="cover-cta">
+      Нажмите здесь,<br>
+      чтобы открыть<br>
+      приглашение
+    </p>
   </div>
 </div>
 

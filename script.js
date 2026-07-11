@@ -1,22 +1,24 @@
 // Opening card
 const cover = document.getElementById('cover');
-const envelope = document.getElementById('envelope');
-const openBtn = document.getElementById('openInvite');
 
-openBtn.addEventListener('click', () => {
-  envelope.classList.add('envelope--open');
-  openBtn.classList.add('cover-btn--hidden');
-
-  setTimeout(() => {
-    cover.classList.add('cover--hidden');
-    document.documentElement.classList.remove('locked');
-    document.body.classList.remove('no-scroll');
-    document.querySelector('.hero').classList.add('visible');
-  }, 950);
+function openInvitation() {
+  if (cover.classList.contains('cover--hidden')) return;
+  cover.classList.add('cover--hidden');
+  document.documentElement.classList.remove('locked');
+  document.body.classList.remove('no-scroll');
+  document.querySelector('.hero').classList.add('visible');
 
   setTimeout(() => {
     cover.remove();
-  }, 1900);
+  }, 950);
+}
+
+cover.addEventListener('click', openInvitation);
+cover.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault();
+    openInvitation();
+  }
 });
 
 // Countdown
