@@ -1,3 +1,24 @@
+// Opening card
+const cover = document.getElementById('cover');
+const envelope = document.getElementById('envelope');
+const openBtn = document.getElementById('openInvite');
+
+openBtn.addEventListener('click', () => {
+  envelope.classList.add('envelope--open');
+  openBtn.classList.add('cover-btn--hidden');
+
+  setTimeout(() => {
+    cover.classList.add('cover--hidden');
+    document.documentElement.classList.remove('locked');
+    document.body.classList.remove('no-scroll');
+    document.querySelector('.hero').classList.add('visible');
+  }, 950);
+
+  setTimeout(() => {
+    cover.remove();
+  }, 1900);
+});
+
 // Countdown
 const weddingDate = new Date('2026-08-07T15:30:00');
 
@@ -46,11 +67,7 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 
 revealEls.forEach((el) => observer.observe(el));
-
-// Hero is visible immediately
-window.addEventListener('load', () => {
-  document.querySelector('.hero').classList.add('visible');
-});
+observer.unobserve(document.querySelector('.hero'));
 
 // RSVP form
 const form = document.getElementById('rsvpForm');
