@@ -21,22 +21,53 @@
   <svg viewBox="0 0 24 24" class="music-icon"><path fill="currentColor" d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3" fill="currentColor"/><circle cx="18" cy="16" r="3" fill="currentColor"/></svg>
 </button>
 
-<!-- OPENING CARD -->
+<!-- OPENING ENVELOPE -->
 <div class="cover" id="cover" role="button" tabindex="0" aria-label="Открыть приглашение">
-  <div class="cover-texture"></div>
-  <div class="cover-inner">
-    <svg class="monogram-svg" viewBox="0 0 300 400" aria-hidden="true">
-      <ellipse cx="150" cy="200" rx="122" ry="163" fill="none" stroke="currentColor" stroke-width="2"/>
-      <path d="M90,45 C102,22 132,16 150,27 C168,16 198,22 210,45" fill="none" stroke="currentColor" stroke-width="2"/>
-      <path d="M90,355 C102,378 132,384 150,373 C168,384 198,378 210,355" fill="none" stroke="currentColor" stroke-width="2"/>
-      <rect x="13" y="193" width="11" height="11" transform="rotate(45 18.5 198.5)" fill="currentColor"/>
-      <rect x="276" y="193" width="11" height="11" transform="rotate(45 281.5 198.5)" fill="currentColor"/>
-      <text x="112" y="252" font-family="'Cormorant Garamond', serif" font-size="150" text-anchor="middle" fill="currentColor" opacity="0.92">Н</text>
-      <text x="192" y="272" font-family="'Cormorant Garamond', serif" font-size="150" text-anchor="middle" fill="currentColor" opacity="0.92">К</text>
-    </svg>
+  <div class="cover-floral" aria-hidden="true"></div>
 
-    <div class="lace"></div>
-    <div class="pearl"></div>
+  <div class="env">
+    <div class="env-stage">
+      <div class="env-flap"></div>
+      <span class="env-lace env-lace--l" aria-hidden="true"></span>
+      <span class="env-lace env-lace--r" aria-hidden="true"></span>
+
+      <svg class="crest" viewBox="0 0 300 360" aria-hidden="true">
+        <g class="crest-line">
+          <!-- oval frame -->
+          <ellipse cx="150" cy="180" rx="90" ry="120" fill="none" stroke-width="1.4"/>
+          <ellipse cx="150" cy="180" rx="82" ry="111" fill="none" stroke-width="0.8"/>
+
+          <!-- top & bottom center ornaments -->
+          <path d="M150,44 C142,54 138,66 150,66 C162,66 158,54 150,44 Z" />
+          <path d="M150,50 C150,36 150,30 150,22 M143,30 C147,34 153,34 157,30" fill="none" stroke-width="1.2"/>
+          <path d="M150,316 C142,326 138,338 150,338 C162,338 158,326 150,316 Z" />
+          <path d="M150,334 C150,344 150,348 150,352 M144,348 C147,345 153,345 156,348" fill="none" stroke-width="1.2"/>
+
+          <!-- mirrored flourishes -->
+          <g class="crest-half">
+            <path d="M150,60 C182,54 214,66 212,96 C211,112 194,116 192,102 C191,92 202,92 202,102" fill="none" stroke-width="1.3"/>
+            <path d="M232,120 C252,132 254,150 246,164 C244,150 240,138 228,130" fill="none" stroke-width="1.3"/>
+            <path d="M240,178 C256,180 262,196 250,206 C254,196 250,186 240,184" fill="none" stroke-width="1.3"/>
+            <path d="M232,238 C252,226 254,208 246,196 C244,210 240,222 228,230" fill="none" stroke-width="1.3"/>
+            <path d="M150,300 C182,306 214,294 212,264 C211,248 194,244 192,258 C191,268 202,268 202,258" fill="none" stroke-width="1.3"/>
+            <circle cx="216" cy="180" r="2.4" />
+          </g>
+          <g class="crest-half" transform="translate(300,0) scale(-1,1)">
+            <path d="M150,60 C182,54 214,66 212,96 C211,112 194,116 192,102 C191,92 202,92 202,102" fill="none" stroke-width="1.3"/>
+            <path d="M232,120 C252,132 254,150 246,164 C244,150 240,138 228,130" fill="none" stroke-width="1.3"/>
+            <path d="M240,178 C256,180 262,196 250,206 C254,196 250,186 240,184" fill="none" stroke-width="1.3"/>
+            <path d="M232,238 C252,226 254,208 246,196 C244,210 240,222 228,230" fill="none" stroke-width="1.3"/>
+            <path d="M150,300 C182,306 214,294 212,264 C211,248 194,244 192,258 C191,268 202,268 202,258" fill="none" stroke-width="1.3"/>
+          </g>
+        </g>
+
+        <!-- monogram -->
+        <text class="crest-mono" x="112" y="212" text-anchor="middle">Н</text>
+        <text class="crest-mono" x="182" y="228" text-anchor="middle">К</text>
+      </svg>
+
+      <div class="env-pearl" aria-hidden="true"></div>
+    </div>
 
     <p class="cover-cta">
       Нажмите здесь,<br>
@@ -173,38 +204,14 @@
     <p class="ornament">✦</p>
 
     <div class="note-block">
+      <h3>Самый главный подарок</h3>
+      <p>Для нас самым главным подарком станет Ваше присутствие, улыбки и хорошее настроение.</p>
+    </div>
+
+    <div class="note-block">
       <h3>Дресс-код</h3>
       <p>Строгого дресс-кода не предусмотрено. Мы хотим, чтобы Вы чувствовали себя комфортно и уверенно,
-      поэтому предлагаем надеть тот самый наряд, для которого до сих пор не находилось особого повода.
-      Будем рады, если наряд поддержит цветовую гамму нашей свадьбы:</p>
-      <div class="palette">
-        <span class="swatch" style="background:#6b4a37" title="Шоколадный"></span>
-        <span class="swatch" style="background:#b08d5b" title="Золотистый"></span>
-        <span class="swatch" style="background:#e4d5c0" title="Бежевый"></span>
-        <span class="swatch" style="background:#3d2b21" title="Тёмно-коричневый"></span>
-        <span class="swatch" style="background:#f7f1e8" title="Молочный"></span>
-      </div>
-    </div>
-
-    <div class="note-block">
-      <h3>Важно знать</h3>
-      <p>Наша свадьба — праздник для взрослых. Будем благодарны, если Вы заранее
-      организуете присмотр за детьми на этот вечер.</p>
-    </div>
-
-    <div class="note-block">
-      <h3>О подарках</h3>
-      <p>Для нас самым главным подарком станет Ваше присутствие, улыбки и хорошее настроение.
-      Если же Вы захотите порадовать нас подарком — будем рады сертификатам вместо цветов,
-      а сам подарок удобнее всего вручить в конверте.</p>
-    </div>
-
-    <div class="note-block">
-      <h3>Будем на связи</h3>
-      <p>Создали общий Telegram-чат, где будем делиться деталями торжества и красивыми фото после праздника.</p>
-      <a class="telegram-btn" href="https://t.me/+996557277544" target="_blank" rel="noopener">
-        Присоединиться в Telegram
-      </a>
+      поэтому предлагаем надеть тот самый наряд, для которого до сих пор не находилось особого повода.</p>
     </div>
   </div>
 </section>
@@ -232,32 +239,6 @@
           <label class="radio-option">
             <input type="radio" name="attendance" value="no">
             <span>К сожалению, не смогу</span>
-          </label>
-        </div>
-      </div>
-
-      <div class="field">
-        <label>Что предпочитаете из напитков?</label>
-        <div class="checkbox-row">
-          <label class="checkbox-option">
-            <input type="checkbox" name="drinks" value="white-wine">
-            <span>Белое вино</span>
-          </label>
-          <label class="checkbox-option">
-            <input type="checkbox" name="drinks" value="red-wine">
-            <span>Красное вино</span>
-          </label>
-          <label class="checkbox-option">
-            <input type="checkbox" name="drinks" value="champagne">
-            <span>Шампанское</span>
-          </label>
-          <label class="checkbox-option">
-            <input type="checkbox" name="drinks" value="spirits">
-            <span>Крепкие напитки</span>
-          </label>
-          <label class="checkbox-option">
-            <input type="checkbox" name="drinks" value="non-alcoholic">
-            <span>Безалкогольные</span>
           </label>
         </div>
       </div>
