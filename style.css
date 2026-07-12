@@ -30,23 +30,26 @@ html.locked, body.no-scroll {
 /* MUSIC PLAYER */
 .music-toggle {
   position: fixed;
-  bottom: 22px;
-  right: 22px;
+  bottom: 26px;
+  right: 26px;
   z-index: 500;
-  width: 52px;
-  height: 52px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  border: 1px solid rgba(176,141,91,0.4);
-  background: var(--cream-light);
+  border: 1.5px solid var(--brown-dark);
+  background: transparent;
   color: var(--brown-dark);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 8px 20px rgba(61,43,33,0.18);
-  transition: background 0.3s, color 0.3s, transform 0.3s;
+  box-shadow: none;
+  transition: all 0.3s ease;
 }
-.music-toggle:hover { transform: scale(1.06); }
+.music-toggle:hover {
+  background: rgba(61,43,33,0.08);
+  transform: scale(1.1);
+}
 .music-icon {
   width: 20px;
   height: 20px;
@@ -60,8 +63,8 @@ html.locked, body.no-scroll {
   to { transform: rotate(360deg); }
 }
 .music-toggle.playing {
-  background: var(--brown-dark);
-  color: var(--cream-light);
+  background: rgba(61,43,33,0.12);
+  border-color: var(--gold);
 }
 
 /* OPENING CARD */
