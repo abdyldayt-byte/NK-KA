@@ -13,6 +13,14 @@
 
 <div class="petals" id="petals"></div>
 
+<!-- MUSIC PLAYER -->
+<audio id="bgMusic" loop preload="none">
+  <source src="assets/audio/song.mp3" type="audio/mpeg">
+</audio>
+<button class="music-toggle" id="musicToggle" type="button" aria-label="Включить/выключить музыку" aria-pressed="false">
+  <svg viewBox="0 0 24 24" class="music-icon"><path fill="currentColor" d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3" fill="currentColor"/><circle cx="18" cy="16" r="3" fill="currentColor"/></svg>
+</button>
+
 <!-- OPENING CARD -->
 <div class="cover" id="cover" role="button" tabindex="0" aria-label="Открыть приглашение">
   <div class="cover-texture"></div>
@@ -58,6 +66,10 @@
 <!-- INTRO -->
 <section class="section intro reveal">
   <div class="container narrow">
+    <div class="header-ornaments">
+      <svg viewBox="0 0 60 40" class="ornament-icon"><path fill="none" stroke="currentColor" stroke-width="1.4" d="M30,36 C20,30 8,26 4,14 C2,7 8,3 13,7 C17,10 17,17 12,19 M30,36 C25,26 22,18 24,10 C26,4 33,3 35,9 C37,14 32,18 27,16"/></svg>
+      <svg viewBox="0 0 60 40" class="ornament-icon ornament-icon--flip"><path fill="none" stroke="currentColor" stroke-width="1.4" d="M30,36 C20,30 8,26 4,14 C2,7 8,3 13,7 C17,10 17,17 12,19 M30,36 C25,26 22,18 24,10 C26,4 33,3 35,9 C37,14 32,18 27,16"/></svg>
+    </div>
     <h2 class="intro-title">Дорогие гости!</h2>
     <p class="intro-text">
       В нашей жизни предстоят счастливые перемены! Мы хотим, чтобы в этот день
@@ -94,34 +106,6 @@
   </div>
 </section>
 
-<!-- COUNTDOWN -->
-<section class="section countdown reveal">
-  <div class="container narrow">
-    <h2 class="section-title">До торжества осталось</h2>
-    <div class="countdown-grid" id="countdown">
-      <div class="countdown-item">
-        <span class="countdown-num" id="cd-days">00</span>
-        <span class="countdown-label">дней</span>
-      </div>
-      <div class="countdown-sep">:</div>
-      <div class="countdown-item">
-        <span class="countdown-num" id="cd-hours">00</span>
-        <span class="countdown-label">часов</span>
-      </div>
-      <div class="countdown-sep">:</div>
-      <div class="countdown-item">
-        <span class="countdown-num" id="cd-minutes">00</span>
-        <span class="countdown-label">минут</span>
-      </div>
-      <div class="countdown-sep">:</div>
-      <div class="countdown-item">
-        <span class="countdown-num" id="cd-seconds">00</span>
-        <span class="countdown-label">секунд</span>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- EVENT DETAILS -->
 <section class="section event reveal">
   <div class="container narrow">
@@ -155,18 +139,72 @@
   </div>
 </section>
 
+<!-- COUNTDOWN -->
+<section class="section countdown reveal">
+  <div class="container narrow">
+    <h2 class="section-title">До торжества осталось</h2>
+    <div class="countdown-grid" id="countdown">
+      <div class="countdown-item">
+        <span class="countdown-num" id="cd-days">00</span>
+        <span class="countdown-label">дней</span>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-item">
+        <span class="countdown-num" id="cd-hours">00</span>
+        <span class="countdown-label">часов</span>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-item">
+        <span class="countdown-num" id="cd-minutes">00</span>
+        <span class="countdown-label">минут</span>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-item">
+        <span class="countdown-num" id="cd-seconds">00</span>
+        <span class="countdown-label">секунд</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- DRESS CODE / GIFTS -->
 <section class="section notes reveal">
   <div class="container narrow">
     <p class="ornament">✦</p>
-    <div class="note-block">
-      <h3>Самый главный подарок</h3>
-      <p>Для нас самым главным подарком станет Ваше присутствие, улыбки и хорошее настроение.</p>
-    </div>
+
     <div class="note-block">
       <h3>Дресс-код</h3>
       <p>Строгого дресс-кода не предусмотрено. Мы хотим, чтобы Вы чувствовали себя комфортно и уверенно,
-      поэтому предлагаем надеть тот самый наряд, для которого до сих пор не находилось особого повода.</p>
+      поэтому предлагаем надеть тот самый наряд, для которого до сих пор не находилось особого повода.
+      Будем рады, если наряд поддержит цветовую гамму нашей свадьбы:</p>
+      <div class="palette">
+        <span class="swatch" style="background:#6b4a37" title="Шоколадный"></span>
+        <span class="swatch" style="background:#b08d5b" title="Золотистый"></span>
+        <span class="swatch" style="background:#e4d5c0" title="Бежевый"></span>
+        <span class="swatch" style="background:#3d2b21" title="Тёмно-коричневый"></span>
+        <span class="swatch" style="background:#f7f1e8" title="Молочный"></span>
+      </div>
+    </div>
+
+    <div class="note-block">
+      <h3>Важно знать</h3>
+      <p>Наша свадьба — праздник для взрослых. Будем благодарны, если Вы заранее
+      организуете присмотр за детьми на этот вечер.</p>
+    </div>
+
+    <div class="note-block">
+      <h3>О подарках</h3>
+      <p>Для нас самым главным подарком станет Ваше присутствие, улыбки и хорошее настроение.
+      Если же Вы захотите порадовать нас подарком — будем рады сертификатам вместо цветов,
+      а сам подарок удобнее всего вручить в конверте.</p>
+    </div>
+
+    <div class="note-block">
+      <h3>Будем на связи</h3>
+      <p>Создали общий Telegram-чат, где будем делиться деталями торжества и красивыми фото после праздника.</p>
+      <a class="telegram-btn" href="https://t.me/+996557277544" target="_blank" rel="noopener">
+        Присоединиться в Telegram
+      </a>
     </div>
   </div>
 </section>
@@ -181,7 +219,7 @@
     <form class="rsvp-form" id="rsvpForm">
       <div class="field">
         <label for="guestName">Ваше имя</label>
-        <input type="text" id="guestName" name="guestName" placeholder="Как Вас зовут?" required>
+        <input type="text" id="guestName" name="guestName" placeholder="Имя Фамилия" required>
       </div>
 
       <div class="field">
@@ -194,6 +232,32 @@
           <label class="radio-option">
             <input type="radio" name="attendance" value="no">
             <span>К сожалению, не смогу</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Что предпочитаете из напитков?</label>
+        <div class="checkbox-row">
+          <label class="checkbox-option">
+            <input type="checkbox" name="drinks" value="white-wine">
+            <span>Белое вино</span>
+          </label>
+          <label class="checkbox-option">
+            <input type="checkbox" name="drinks" value="red-wine">
+            <span>Красное вино</span>
+          </label>
+          <label class="checkbox-option">
+            <input type="checkbox" name="drinks" value="champagne">
+            <span>Шампанское</span>
+          </label>
+          <label class="checkbox-option">
+            <input type="checkbox" name="drinks" value="spirits">
+            <span>Крепкие напитки</span>
+          </label>
+          <label class="checkbox-option">
+            <input type="checkbox" name="drinks" value="non-alcoholic">
+            <span>Безалкогольные</span>
           </label>
         </div>
       </div>

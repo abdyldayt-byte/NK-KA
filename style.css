@@ -27,6 +27,43 @@ html.locked, body.no-scroll {
   height: 100%;
 }
 
+/* MUSIC PLAYER */
+.music-toggle {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  z-index: 500;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid rgba(176,141,91,0.4);
+  background: var(--cream-light);
+  color: var(--brown-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(61,43,33,0.18);
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+.music-toggle:hover { transform: scale(1.06); }
+.music-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 6s linear;
+}
+.music-toggle.playing .music-icon {
+  animation: spinNote 5s linear infinite;
+}
+@keyframes spinNote {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.music-toggle.playing {
+  background: var(--brown-dark);
+  color: var(--cream-light);
+}
+
 /* OPENING CARD */
 .cover {
   position: fixed;
@@ -236,6 +273,21 @@ html.locked, body.no-scroll {
 }
 
 /* INTRO */
+.header-ornaments {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: 22px;
+}
+.ornament-icon {
+  width: 46px;
+  height: auto;
+  color: var(--gold);
+  opacity: 0.75;
+}
+.ornament-icon--flip { transform: scaleX(-1); }
+
 .intro-title {
   font-family: var(--script);
   font-weight: 400;
@@ -425,6 +477,40 @@ html.locked, body.no-scroll {
   font-weight: 300;
 }
 
+.palette {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 18px;
+}
+.swatch {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(61,43,33,0.15);
+  box-shadow: 0 3px 8px rgba(61,43,33,0.15);
+  display: inline-block;
+}
+
+.telegram-btn {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 13px 32px;
+  background: transparent;
+  border: 1px solid var(--brown-dark);
+  color: var(--brown-dark);
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+.telegram-btn:hover {
+  background: var(--brown-dark);
+  color: var(--cream-light);
+}
+
 /* RSVP */
 .rsvp-deadline {
   font-family: var(--sans);
@@ -476,6 +562,23 @@ html.locked, body.no-scroll {
   cursor: pointer;
 }
 .radio-option input { accent-color: var(--gold); width: 16px; height: 16px; }
+
+.checkbox-row {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.checkbox-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--brown);
+  cursor: pointer;
+}
+.checkbox-option input { accent-color: var(--gold); width: 16px; height: 16px; }
+
 .btn-submit {
   margin-top: 10px;
   align-self: center;

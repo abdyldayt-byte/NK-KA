@@ -1,5 +1,7 @@
 // Opening card
 const cover = document.getElementById('cover');
+const bgMusic = document.getElementById('bgMusic');
+const musicToggle = document.getElementById('musicToggle');
 
 function openInvitation() {
   if (cover.classList.contains('cover--hidden')) return;
@@ -8,10 +10,28 @@ function openInvitation() {
   document.body.classList.remove('no-scroll');
   document.querySelector('.hero').classList.add('visible');
 
+  bgMusic.play().then(() => {
+    musicToggle.classList.add('playing');
+    musicToggle.setAttribute('aria-pressed', 'true');
+  }).catch(() => {});
+
   setTimeout(() => {
     cover.remove();
   }, 950);
 }
+
+musicToggle.addEventListener('click', () => {
+  if (bgMusic.paused) {
+    bgMusic.play().then(() => {
+      musicToggle.classList.add('playing');
+      musicToggle.setAttribute('aria-pressed', 'true');
+    }).catch(() => {});
+  } else {
+    bgMusic.pause();
+    musicToggle.classList.remove('playing');
+    musicToggle.setAttribute('aria-pressed', 'false');
+  }
+});
 
 cover.addEventListener('click', openInvitation);
 cover.addEventListener('keydown', (e) => {
