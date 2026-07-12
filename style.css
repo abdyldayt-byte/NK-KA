@@ -57,23 +57,23 @@ html.locked, body.no-scroll {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 2px solid #4f7cf6;
-  background: radial-gradient(circle at 32% 28%, #2a3342 0%, #1b2230 65%, #171d29 100%);
+  border: 2px solid var(--gold);
+  background: radial-gradient(circle at 32% 28%, #5a4a3a 0%, #3d2b21 65%, #2b1f18 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 4px;
   cursor: pointer;
   box-shadow:
-    0 0 0 3px rgba(79,124,246,0.14),
-    0 8px 18px rgba(20,25,38,0.35);
+    0 0 0 3px rgba(176,141,91,0.12),
+    0 8px 18px rgba(61,43,33,0.35);
   transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
 }
 .music-toggle:hover {
   transform: scale(1.08);
   box-shadow:
-    0 0 0 5px rgba(79,124,246,0.20),
-    0 10px 22px rgba(20,25,38,0.4);
+    0 0 0 5px rgba(176,141,91,0.18),
+    0 10px 22px rgba(61,43,33,0.4);
 }
 
 .eq-bar {
