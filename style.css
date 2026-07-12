@@ -149,11 +149,22 @@ html.locked, body.no-scroll {
   position: absolute;
   top: 0;
   width: 350px;
-  height: 20px;
-  background-image: radial-gradient(circle at 11px -2px, #fcfaf5 0 9px, transparent 10px);
-  background-size: 22px 22px;
+  height: 22px;
+  background-image:
+    radial-gradient(circle at 8px 1px, #fcfaf5 0 6.5px, transparent 7.5px),
+    radial-gradient(circle at 8px -3px, rgba(176,141,91,0.35) 0 7.5px, transparent 8.5px);
+  background-size: 16px 16px;
   background-repeat: repeat-x;
   filter: drop-shadow(0 2px 1px rgba(150,132,104,0.35));
+}
+.env-lace::after {
+  content: '';
+  position: absolute;
+  inset: 3px 0 auto 0;
+  height: 3px;
+  background-image: radial-gradient(circle at 8px 1.5px, rgba(176,141,91,0.4) 0 1.1px, transparent 1.6px);
+  background-size: 16px 16px;
+  background-repeat: repeat-x;
 }
 .env-lace--l {
   left: 0;
