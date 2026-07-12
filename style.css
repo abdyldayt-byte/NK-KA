@@ -33,38 +33,51 @@ html.locked, body.no-scroll {
   bottom: 26px;
   right: 26px;
   z-index: 500;
-  width: 44px;
-  height: 44px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  border: 1.5px solid var(--brown-dark);
-  background: transparent;
-  color: var(--brown-dark);
+  border: 2px solid #4f7cf6;
+  background: radial-gradient(circle at 32% 28%, #2a3342 0%, #1b2230 65%, #171d29 100%);
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 4px;
   cursor: pointer;
-  box-shadow: none;
-  transition: all 0.3s ease;
+  box-shadow:
+    0 0 0 3px rgba(79,124,246,0.14),
+    0 8px 18px rgba(20,25,38,0.35);
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
 }
 .music-toggle:hover {
-  background: rgba(61,43,33,0.08);
-  transform: scale(1.1);
+  transform: scale(1.08);
+  box-shadow:
+    0 0 0 5px rgba(79,124,246,0.20),
+    0 10px 22px rgba(20,25,38,0.4);
 }
-.music-icon {
-  width: 20px;
-  height: 20px;
-  transition: transform 6s linear;
+
+.eq-bar {
+  display: inline-block;
+  width: 3px;
+  border-radius: 2px;
+  background: #f4f6fb;
+  height: 8px;
+  transform-origin: center;
+  transition: height 0.25s ease;
 }
-.music-toggle.playing .music-icon {
-  animation: spinNote 5s linear infinite;
+.eq-bar--1 { height: 9px; }
+.eq-bar--2 { height: 17px; }
+.eq-bar--3 { height: 12px; }
+
+.music-toggle.playing .eq-bar {
+  animation: eqBounce 0.9s ease-in-out infinite;
 }
-@keyframes spinNote {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-.music-toggle.playing {
-  background: rgba(61,43,33,0.12);
-  border-color: var(--gold);
+.music-toggle.playing .eq-bar--1 { animation-delay: -0.6s; }
+.music-toggle.playing .eq-bar--2 { animation-delay: -0.2s; }
+.music-toggle.playing .eq-bar--3 { animation-delay: -0.9s; }
+
+@keyframes eqBounce {
+  0%, 100% { height: 7px; }
+  50% { height: 19px; }
 }
 
 /* OPENING CARD */
