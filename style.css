@@ -106,9 +106,7 @@ html.locked, body.no-scroll {
   inset: 0;
   z-index: 1000;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(180deg, #faf7f0 0%, #f2ebdc 100%);
+  flex-direction: column;
   cursor: pointer;
   transition: opacity 0.9s ease, transform 0.9s ease;
   overflow: hidden;
@@ -119,7 +117,38 @@ html.locked, body.no-scroll {
   pointer-events: none;
 }
 
-.cover {
+/* linen-textured surface strips top & bottom, like a card resting on fabric */
+.cover-linen {
+  flex: 0 0 auto;
+  width: 100%;
+  position: relative;
+  background:
+    repeating-linear-gradient(45deg, rgba(110,95,70,0.09) 0px, rgba(110,95,70,0.09) 1px, transparent 1px, transparent 3px),
+    repeating-linear-gradient(-45deg, rgba(110,95,70,0.07) 0px, rgba(110,95,70,0.07) 1px, transparent 1px, transparent 3px),
+    linear-gradient(180deg, #e6ddc9 0%, #ded2b3 100%);
+}
+.cover-linen--top { height: clamp(46px, 10vh, 84px); }
+.cover-linen--bottom {
+  height: clamp(24px, 5vh, 40px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 26px;
+}
+.cover-linen-spark {
+  color: var(--gold);
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+/* the cream card face itself, between the two linen strips */
+.cover-card {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   background: linear-gradient(160deg, #fffefb 0%, #faf6ec 55%, #f6efe0 100%);
 }
 
@@ -137,6 +166,23 @@ html.locked, body.no-scroll {
     radial-gradient(ellipse 80px 120px at 50% 96%, rgba(214,203,182,0.28), transparent 72%);
   mix-blend-mode: soft-light;
 }
+
+/* embossed floral spray filling the lower corners of the card */
+.bloom {
+  position: absolute;
+  bottom: -8px;
+  width: clamp(120px, 30vw, 190px);
+  height: auto;
+  z-index: 1;
+  color: #efe7d8;
+  opacity: 0.8;
+  filter:
+    drop-shadow(-0.6px -0.6px 0.3px rgba(255,255,255,0.95))
+    drop-shadow(1px 1.2px 1px rgba(176,150,110,0.4));
+}
+.bloom-line { fill: none; stroke: currentColor; }
+.bloom--l { left: -6px; }
+.bloom--r { right: -6px; transform: scaleX(-1); }
 
 .env {
   position: relative;
